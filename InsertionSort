@@ -8,6 +8,9 @@ void InsertionSort(int arr[], int n){
                 arr[min_index]=temp;
                 min_index=j;
             }
+            else{
+                break;
+            }
         }
     }
 

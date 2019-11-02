@@ -1,0 +1,41 @@
+void merge(int arr1[], int size1, int arr2[], int size2, int ans[]){
+    
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Save the merged array in ans[] array passed as argument.
+     * Don't return or print anything.
+     * Taking input and printing output is handled automatically.
+     */
+    
+           
+    int i,j;
+    i=0;
+    j=0;
+    int k=0;
+    while(i<size1 && j<size2){
+        if(arr1[i]<arr2[j]){
+            ans[k]=arr1[i];
+            i++;
+            k++;
+        }
+        else{
+            ans[k]=arr2[j];
+            j++;
+            k++;
+        }
+    }
+    if(i<size1){
+        for(;i<size1;i++){
+            ans[k]=arr1[i];
+            k++;
+        }
+    }
+    else if(j<size2){
+        for(;j<size2;j++){
+            ans[k]=arr2[j];
+            k++;
+        }
+    }
+    
+    
+}

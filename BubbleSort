@@ -1,5 +1,5 @@
 void BubbleSort(int input [], int n){
-    for(int i=0;i<n;i++){//Total (n-1) round will need
+    for(int i=0;(i<n-1);i++){//Total (n-1) round will need
         for(int j=0;j<(n-i-1);j++){
             if(input[j]>input[j+1]){       //compare with neighbour and swap it.
                 int temp = input[j+1];

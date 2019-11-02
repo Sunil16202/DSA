@@ -1,0 +1,15 @@
+void selectionSort(int input [], int n){
+    for(int i=0;i<n;i++){       //let firrst element is minimum and compare it with others
+        int min_index =i;            
+        for(int j=i+1;j<n;j++){ //find minimum
+            if(input[min_index]>input[j]){
+                min_index=j;
+            }
+        }
+        //Swap with minimum
+        int temp = input[i];
+        input[i]=input[min_index];
+        input[min_index]=temp;
+    }
+
+}

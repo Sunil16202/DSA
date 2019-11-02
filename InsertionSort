@@ -1,0 +1,14 @@
+void InsertionSort(int arr[], int n){
+    for(int i=1;i<n;i++){
+        int min_index=i; //let min index
+        for(int j=(i-1);j>=0;j--){  //run a loop from 0 to (i-1)
+            if(arr[min_index]<arr[j]){
+                int temp=arr[j];
+                arr[j]=arr[min_index];
+                arr[min_index]=temp;
+                min_index=j;
+            }
+        }
+    }
+
+}

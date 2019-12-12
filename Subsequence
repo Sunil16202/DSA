@@ -1,0 +1,33 @@
+#include<iostream>  
+using namespace std; 
+
+//Subsequence problem
+//Total subsequence of n length chracter is (2^n)
+
+int Subsequence(string input, string output[]){
+	if(input.empty()){
+		output[0]="";
+		return 1;
+	}
+	string SmallString = input.substr(1);
+	int SmallOutputSize = Subsequence(SmallString,output);
+	for(int i=0;i<SmallOutputSize;i++){
+		output[i+SmallOutputSize] = input[0]+output[i];
+	}
+	return 2*SmallOutputSize;
+
+}
+
+int main(){
+	string input;
+	cin>>input;
+	string* output=new string[1000];
+	int count = Subsequence(input,output);
+	int len=0;
+	for(int i=0;i<count;i++){
+		cout<<output[i]<<endl;
+		len++;
+	}
+	cout<<"Total Numbers of Subsequence is - "<<len<<endl;
+	return 0;
+}
